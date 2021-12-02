@@ -1,0 +1,7 @@
+{
+  "/sweetApi": {
+      "target": "http://210.67.12.109/",
+      "secure": false,
+      "changeOrigin": true
+  }
+}
