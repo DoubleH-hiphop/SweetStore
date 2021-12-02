@@ -1,17 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Hot } from '../hot';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FetLibService {
 
-  public getData = new Hot();
-  public data: Hot[] = [];
 
   private mainUrl: string = 'sweetApi/';
   constructor(private http: HttpClient) { }
+
+  getAllData() {
+    let allDataName = 'getAllProductType';
+    let allDataUrl = this.mainUrl + allDataName;
+    return this.http.post<any>(allDataUrl,'')
+  }
 
   forGetData(typeId: number) {
     const body = {
@@ -19,10 +22,8 @@ export class FetLibService {
     }
     let dataUrl = 'getProductsByTypeId';
     let allUrl = this.mainUrl + dataUrl;
-    return this.http.post<Hot[]>(allUrl, body).subscribe(
-      (data: Hot[]) => {
-        return this.data
-      }
-    )
+    return this.http.post<any>(allUrl, body)
   }
+
+
 }

@@ -289,26 +289,23 @@
  }
 
  .todays-pick-1 {
-     background-image: url(/assets/img/photo-1534073737927-85f1ebff1f5d.jfif);
      background-size: cover;
      background-position: center center;
      height: 315px;
  }
 
- .todays-pick-2 {
-     background-image: url(/assets/img/photo-1525059337994-6f2a1311b4d4.jfif);
+ /* .todays-pick-2 {
      background-size: cover;
      background-position: center center;
      height: 315px;
  }
 
  .todays-pick-3 {
-     background-image: url(/assets/img/photo-1490474504059-bf2db5ab2348.jfif);
      background-size: cover;
      background-position: center center;
      height: 315px;
      position: relative;
- }
+ } */
 
  .card-font-size {
      font-size: 1.25rem;

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { FetLibService } from '../service/fet-lib.service';
 
 @Component({
   selector: 'app-sweet-products',
@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 
 export class SweetProductsComponent implements OnInit {
   private mainUrl: string = 'sweetApi/';
-
-  constructor(private http: HttpClient) { }
+  public data:any;
+  constructor(private http: HttpClient, public fetData: FetLibService) { }
 
   public searchProducts(inputValue: string) {
     const toSearchInfo = {
@@ -25,5 +25,12 @@ export class SweetProductsComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.fetData.getAllData().subscribe(
+      res=>{
+        this.data = res.data;
+        console.log(this.data);
+      }
+    )
+  }
 }

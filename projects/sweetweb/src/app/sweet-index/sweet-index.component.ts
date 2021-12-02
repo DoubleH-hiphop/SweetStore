@@ -9,25 +9,13 @@ import { FetLibService } from '../service/fet-lib.service';
   ]
 })
 export class SweetIndexComponent implements OnInit {
-  private mainUrl = "sweetApi/";
-  
-  constructor(private http: HttpClient, public fetData:FetLibService) { }
+  constructor(private http: HttpClient, public fetData: FetLibService) { }
 
-
-  private getData(typeId: number) {
-    const body = {
-      typeId: typeId,
-    }
-    let functionName = 'getProductsByTypeId';
-    let allUrl = this.mainUrl + functionName;
-    this.http.post<any>(allUrl, body).subscribe(
-      res => { console.log(res, typeId) })
-  }
-
-  
+  public data: any;
 
   ngOnInit(): void {
-    this.fetData.forGetData(1);
-
+    this.fetData.forGetData(1).subscribe(
+      res => {this.data = res.data;}
+    );
   }
 }
