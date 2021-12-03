@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let item of todayList">
+        <div class="card">
+            <img src="{{item[4]}}" class="todays-pick-1" />
+            <div class="todays-pick-tag text-vertical px-2 py-3 ">本日精選</div>
+            <div class="row text-center color-green">
+                <div class="col-6 py-3 info-border card-font-size">{{item[1]}}</div>
+                <strong class="col-6 py-3 card-font-size">{{item[2]}}</strong>
+            </div>
+            <a routerLink="cart" class="btn add-to-cart py-3 card-font-size">加入購物車</a>
+        </div>
+    </div>
+</div>

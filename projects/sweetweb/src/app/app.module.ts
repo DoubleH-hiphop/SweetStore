@@ -12,6 +12,9 @@ import { CartComponent } from './cart/cart.component';
 import { SweetIndexComponent } from './sweet-index/sweet-index.component';
 import { SweetRegisterComponent } from './sweet-register/sweet-register.component';
 import { FooterComponent } from './footer/footer.component';
+import { TodayComponent } from './sweet-products/today/today.component';
+import { NewProductsComponent } from './sweet-products/new-products/new-products.component';
+import { HotComponent } from './sweet-products/hot/hot.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { FooterComponent } from './footer/footer.component';
     CartComponent,
     SweetRegisterComponent,
     FooterComponent,
+    TodayComponent,
+    NewProductsComponent,
+    HotComponent,
     
   ],
   imports: [

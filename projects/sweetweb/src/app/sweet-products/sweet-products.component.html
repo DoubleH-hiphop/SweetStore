@@ -11,21 +11,22 @@
                 <h4 class="list-header mb-0 py-3 text-center">甜點類別</h4>
                 <div class="list-group text-center h4" id="list-tab" role="tablist">
                     <a class="list-group-item rounded-0 list-group-item-action active" id="list-home-list"
-                        data-toggle="list" routerLink="products" role="tab" aria-controls="home">所有甜點（48）</a>
+                        routerLink="/products" data-toggle="list" role="tab" aria-controls="home">所有甜點（48）</a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
-                        routerLink="todayGood" role="tab" aria-controls="profile">本日精選（10）</a>
+                        routerLink="today" role="tab" aria-controls="profile">本日精選（10）</a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
                         routerLink="hot" role="tab" aria-controls="messages">人氣精選（26）</a>
                     <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
                         routerLink="newProducts" role="tab" aria-controls="settings">新品上市（12）</a>
                     <a class="list-group-item rounded-0 list-group-item-action disabled" id="list-settings-list"
-                        href="#" role="tab" aria-controls="settings">絕版品</a>
+                        role="tab" aria-controls="settings">絕版品</a>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel"
                         aria-labelledby="list-home-list">
+
                         <div class="row">
                             <div class="col-md-8 mb-0 py-3">
                                 <input type="text" class="form-control border border-primary" #inputValue
@@ -36,48 +37,11 @@
                                 <button class="btn list-header" (click)="searchProducts(inputValue.value)">查詢</button>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="card">
-                                    <div class="todays-pick-1">
-                                        <div class="todays-pick-tag text-vertical px-2 py-3 ">本日精選</div>
-                                    </div>
-                                    <div class="row text-center color-green">
-                                        <div class="col-6 py-3 info-border card-font-size">焦糖馬卡龍</div>
-                                        <strong class="col-6 py-3 card-font-size">NT$ 450</strong>
-                                    </div>
-                                    <a routerLink="cart" class="btn add-to-cart py-3 card-font-size">加入購物車</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="card">
-                                    <div class="todays-pick-2">
-                                        <div class="todays-pick-tag text-vertical px-2 py-3 ">本日精選</div>
-                                    </div>
-                                    <div class="row text-center color-green">
-                                        <div class="col-6 py-3 info-border card-font-size">牛奶尬圈圈</div>
-                                        <strong class="col-6 py-3 card-font-size">NT$ 450</strong>
-                                    </div>
-                                    <a routerLink="cart" class="btn add-to-cart py-3 card-font-size">加入購物車</a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 mb-4">
-                                <div class="card">
-                                    <div class="todays-pick-3">
-                                        <div class="todays-pick-tag text-vertical px-2 py-3 ">本日精選</div>
-                                    </div>
-                                    <div class="row text-center color-green">
-                                        <div class="col-6 py-3 info-border card-font-size">保證不烙賽</div>
-                                        <strong class="col-6 py-3 card-font-size">NT$ 450</strong>
-                                    </div>
-                                    <a routerLink="cart" class="btn add-to-cart py-3 card-font-size">加入購物車</a>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        <router-outlet></router-outlet>
                     </div>
                 </div>
+
                 <div class="d-flex justify-content-center">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination my-4">

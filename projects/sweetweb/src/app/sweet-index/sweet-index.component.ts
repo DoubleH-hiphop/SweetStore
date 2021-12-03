@@ -15,7 +15,7 @@ export class SweetIndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetData.forGetData(1).subscribe(
-      res => {this.data = res.data;}
+      res => {this.data = res.data; console.log(this.data);}
     );
   }
 }

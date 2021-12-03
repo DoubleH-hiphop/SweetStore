@@ -11,7 +11,7 @@ import { FetLibService } from '../service/fet-lib.service';
 
 export class SweetProductsComponent implements OnInit {
   private mainUrl: string = 'sweetApi/';
-  public data:any;
+  public  data:any;
   constructor(private http: HttpClient, public fetData: FetLibService) { }
 
   public searchProducts(inputValue: string) {
@@ -29,8 +29,7 @@ export class SweetProductsComponent implements OnInit {
     this.fetData.getAllData().subscribe(
       res=>{
         this.data = res.data;
-        console.log(this.data);
       }
-    )
+    );
   }
 }
