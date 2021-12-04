@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TodayComponent } from './sweet-products/today/today.component';
 import { NewProductsComponent } from './sweet-products/new-products/new-products.component';
 import { HotComponent } from './sweet-products/hot/hot.component';
+import { AllProductsComponent } from './sweet-products/all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HotComponent } from './sweet-products/hot/hot.component';
     TodayComponent,
     NewProductsComponent,
     HotComponent,
+    AllProductsComponent,
     
   ],
   imports: [

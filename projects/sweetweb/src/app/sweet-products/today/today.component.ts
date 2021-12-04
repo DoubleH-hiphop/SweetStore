@@ -8,7 +8,7 @@ import { FetLibService } from '../../service/fet-lib.service';
   ]
 })
 export class TodayComponent implements OnInit {
-  public todayList:[]=[];
+  public todayList:string[]=[];
   constructor(public todaySev:FetLibService) { }
 
   ngOnInit(): void {

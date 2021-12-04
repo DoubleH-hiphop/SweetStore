@@ -7,6 +7,7 @@ import { TodayComponent } from './sweet-products/today/today.component';
 import { SweetRegisterComponent } from './sweet-register/sweet-register.component';
 import { HotComponent } from './sweet-products/hot/hot.component';
 import { NewProductsComponent } from './sweet-products/new-products/new-products.component';
+import { AllProductsComponent } from './sweet-products/all-products/all-products.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -14,9 +15,11 @@ const routes: Routes = [
   {
     path: 'products', component: SweetProductsComponent,
     children: [
+      { path: '', redirectTo: 'allProducts', pathMatch: 'full' },
       { path: 'today', component: TodayComponent },
       { path: 'hot', component: HotComponent },
-      {path:'newProducts', component:NewProductsComponent}
+      { path: 'newProducts', component: NewProductsComponent },
+      { path: 'allProducts', component: AllProductsComponent }
     ]
   },
   { path: 'register', component: SweetRegisterComponent },
